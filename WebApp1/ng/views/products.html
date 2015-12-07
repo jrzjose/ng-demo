@@ -1,0 +1,25 @@
+﻿<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Product Number</th>
+            <th>Color</th>
+            <th>List Price</th>
+            <th>Weight</th>
+            <th>Style</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="p in products" ng-click="editProduct(p, $event)">
+            <th>{{p.Value.Name}}</th>
+            <th>{{p.Value.ProductNumber}}</th>
+            <th>{{p.Value.Color}}</th>
+            <th>{{p.Value.ListPrice}}</th>
+            <th>{{p.Value.Weight}}</th>
+            <th>{{p.Value.Style}}</th>
+        </tr>
+    </tbody>
+</table>
+
+<a href="#products/0" class="btn btn-primary">New Product</a>
+

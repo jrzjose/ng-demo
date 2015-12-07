@@ -1,0 +1,40 @@
+﻿<form>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" placeholder="Enter Product Name" name="Name" ng-model="product.Name">
+    </div>
+    <div class="form-group">
+        <label>Product Number</label>
+        <input type="text" class="form-control" placeholder="Enter Product Number" name="ProductNumber" ng-model="product.ProductNumber">
+    </div>
+    <div class="form-group">
+        <label>Color</label>
+        <select class="form-control" name="Color" required ng-model="product.Color" ng-options="c for c in colors"></select>
+    </div>
+    <div class="form-group">
+        <label>List Price</label>
+        <input type="text" class="form-control" placeholder="Enter Product ListPrice" name="ListPrice" ng-model="product.ListPrice">
+    </div>
+    <div class="form-group">
+        <label>List Price</label>
+        <input type="text" class="form-control" placeholder="Enter Product Weight" name="Weight" ng-model="product.Weight">
+    </div>
+    <div class="form-group">
+        <label>Style</label>
+        <select class="form-control" name="Color" required ng-model="product.Color" ng-options="s.Id as s.Name for s in styles"></select>
+    </div>
+    <div class="form-group">
+        <label>Style</label>
+        <select class="form-control" name="ProductModelID" required ng-model="product.ProductModelID" ng-options="m.ModelId as m.Name for m in models"></select>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary btn-block" ng-click="save()">Save</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary btn-block" ng-click="cancel()">Cancel</button>
+        </div>
+    </div>
+
+</form>
